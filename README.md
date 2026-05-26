@@ -5,7 +5,7 @@ This is my firmware configuration for [ZMK](https://zmk.dev/docs/).
 
 ## My journey
 
-My layout started in a Ferris Sweep so I only had two availabe thumb keys. Since I also use Colemak it made sense to use a layout based on [Seniply](https://stevep99.github.io/seniply/). 
+My layout started in a Ferris Sweep so I only had two availabe thumb keys. Initially used Colemak with a layout based on [Seniply](https://stevep99.github.io/seniply/), but have since transitioned to QWERTY. 
 
 Now I'm using a Corne. Having three thumb keys opens the possibility to have mouse movements and other features I want to try.
 One problem I have with my keymap is that using the space/shift on both hands takes too much real state in the thumb cluster. To solve the issue I've started experimenting with only moving the SHFT key into home-row mods.
