@@ -19,11 +19,19 @@
 #
 ---
 include:
-  # Essential Corne halves for nice!nano
+  # Seeed XIAO BLE acts as the USB dongle (central)
+  - board: seeeduino_xiao_ble
+    shield: corne_dongle
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
+
+  # nice!nano halves are BLE peripherals
   - board: nice_nano_v2
     shield: corne_left
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
   - board: nice_nano_v2
     shield: corne_right
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
 
   # Settings reset utility
   - board: nice_nano_v2
