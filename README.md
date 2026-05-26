@@ -16,7 +16,27 @@ If I see that I can get used to home-row mods, I'll start transitioning my layou
 I've been using my corne keyboards for the last six months. The shift in the home row feels odd (maybe due to bad config?). 
 I've decided to switch from *Colemak* back to *qwerty*. It will be a pain but I think it will be worth it in the long run.
 
-## Distinctive features 
+## Hardware setup
+
+This config targets a **5-column Corne** with a dongle setup:
+
+- **Seeed Studio XIAO BLE** — acts as the USB dongle (central). Plugs into the computer via USB and relays keystrokes from the halves over BLE.
+- **Left nice!nano** — left keyboard half (BLE peripheral).
+- **Right nice!nano** — right keyboard half (BLE peripheral).
+
+### Flashing after firmware changes
+
+Whenever the split topology changes (or after any significant firmware update), BLE bond data must be cleared or the halves and dongle will fail to connect and no keypresses will register.
+
+**Always follow this order:**
+
+1. Flash `settings_reset` to the XIAO BLE, then each nice!nano.
+2. Re-flash the actual firmware: dongle first, then left half, then right half.
+3. Power on the XIAO (via USB) first, wait a few seconds, then power on each half.
+
+The halves auto-pair with the dongle over BLE. The computer recognises the XIAO as a USB HID keyboard.
+
+## Distinctive features
 
 I did so many modifications to the layout that it no longer resembles the original one. Here a none exhaustive list of modifications:
 
